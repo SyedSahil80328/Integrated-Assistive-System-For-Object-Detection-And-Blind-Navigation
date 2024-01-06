@@ -113,4 +113,11 @@ mv Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation.git bli
 ```
 <p>We are shrinking the path name, as remembering such a big name is tedious. You can give your own name. But recommended to keep the name as it is.</p>
 
+<h1>Running the code</h1>
+<p>Running the script creates a popup showing capture from your camera with detected objects with distance away from the camera. If an object or person is near to the blind (camera in this case), pyttsx3 module conveys the message in voice format like Move away. It can be run by</p>
+
+```
+python3 /home/pi/Desktop/blindhelper/objectdetector.py
+```
+
 
