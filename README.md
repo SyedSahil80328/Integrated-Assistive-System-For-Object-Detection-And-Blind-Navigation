@@ -108,5 +108,9 @@ sudo rm EXTERNALLY-MANAGED
 
 ```
 cd Desktop
-git clone https://github.com/syed-sahil-100/Integrated-Assis
+git clone https://github.com/syed-sahil-100/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation.git
+mv Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation.git blindhelper
 ```
+<p>We are shrinking the path name, as remembering such a big name is tedious. You can give your own name. But recommended to keep the name as it is.</p>
+
+
