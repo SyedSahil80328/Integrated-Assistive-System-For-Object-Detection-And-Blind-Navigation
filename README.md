@@ -7,6 +7,7 @@
 <li>Raspberry PI adapter or battery</li>
 <li>Raspberry PI cooler (Fan)</li>
 <li>Audio device (Speaker or Headphones)</li>
+<li>PI Camera or USB Webcam</li>
 </ol>
 <h1>Basic Installation</h1>
 <p>Refer <a href="https://www.raspberrypi.com/documentation/computers/getting-started.html">here</a> for learning complete setup of your Raspberry PI.</p>
@@ -14,9 +15,25 @@
 <p>Note: You can also install it with NOOBS <i>(New Out Of Box Software)</i> by clicking <a href="https://www.raspberrypi.com/news/introducing-noobs/">this link.</a></p>
 <p>After installing, your Raspberry PI interface will look like this:</p>
 <img src="https://www.raspberrypi.com/documentation/computers/images/recommended-software.png">
-<h1>Usage of our project</h1>
+<h1>Upgrading the PI</h1>
 <p>First, you'll need to make some upgrades on your PI via terminal</p>
-To update, run: 
-```bash
-sudo apt-get update -y
+
 ```
+sudo apt-get update -y
+sudo apt-get upgrade -y
+```
+
+<p>This will take about minutes or an hour to complete upgrading process.</p>
+<p>After upgrading, reboot the PI by </p>
+
+```
+sudo reboot
+```
+
+<h1>Enabling Camera Option</h1>
+<p>After rebooting, we need to enable the camera option for suuccessful object detection. To do this, open the terminal and type</p>
+
+```
+sudo raspi-config
+```
+
