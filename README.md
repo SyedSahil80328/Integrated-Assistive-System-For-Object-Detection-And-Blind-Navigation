@@ -2,13 +2,43 @@
 <p>Embark on a transformative journey towards enhanced accessibility and independence with our innovative repository, 'Integrated Assistive System for Object Detection and Blind Navigation.' This comprehensive solution seamlessly combines cutting-edge object detection capabilities and intelligent blind navigation technologies. Empower individuals with visual impairments to navigate their surroundings confidently, fostering a more inclusive and connected world.</p>
 <h1>Basic Hardware Requirements</h1>
 <ol>
-<li>Raspberry PI 4 or higher (8GB Memory)</li>
-<li>Micro SD Card (32GB or higher)</li>
-<li>Raspberry PI adapter or battery</li>
-<li>Raspberry PI cooler (Fan)</li>
-<li>Audio device (Speaker or Headphones)</li>
-<li>PI Camera or USB Webcam</li>
+<li>Raspberry PI Computer.<sup><i>1</i></sup></li>
+<li>Micro SD Card.<sup><i>2</i></sup></li>
+<li>Raspberry PI adapter or battery.</li>
+<li>Raspberry PI Fan.</li>
+<li>Any type of light weight cap.</li>
+<li>Speaker or Headphones.<sup><i>3</i></sup></li>
+<li>PI Camera or USB Webcam.</li>
+<li>Raspberry PI Case.</li>
+<li>Raspberry PI Heatsink.</li>
 </ol>
+<i>
+<sup>1</sup>Version 4 or Higher with Main memory of 8 Gigabytes.<br>
+<sup>2</sup>32 Gigabytes is sufficient, but 64 is recommended for development purpose and avoiding storage shortage.<br>
+<sup>3</sup>Wired is recommended, as wireless connection requires desktop setting for initiating or manipulating connection.
+</i>
+<h1>Setup Environment</h1>
+<p>We can have laboratory environment both wired(just like desktop computer) or wireless(through SSH or VNC).</p>
+<p>For Wired setup, we require</p>
+<ol>
+<li>Monitor which supports HDMI port.<sup><i>1</i></sup></li>
+<li>Mouse.</li>
+<li>Keyboard.</li>
+<li>HDMI to micro HDMI cable or adapter.</li>
+</ol>
+<i><sup>1</sup>If you have only VGA port in your monitor and doesn't support audio, a VGA to HDMI adapter with an audio device is needed.</i>
+<p>For wireless usage, you should enable SSH (given <a href="https://www.raspberrypi.com/documentation/computers/getting-started.html#install-using-imager">here</a>).<br>
+Then issue the command.
+
+```
+ssh pi@192.168.29.165 #Replace it with actual username of PI and IP address of your device.
+```
+</p>
+<i>
+<b>Note:</b> Both PI and operating device must be in same Wi-Fi network.<br>
+<b>Tips:</b> After connecting the operating device to a Wi-Fi, you can find IP address through the application <a href="https://www.fing.com/products/fing-desktop">fing</a>.
+</i>
+<p>To have seamless experience, we recommend using wired method as it is easy and doesn't require internet (except for installation and upgrading required modules).</p>
 <h1>Basic Installation</h1>
 <p>Refer <a href="https://www.raspberrypi.com/documentation/computers/getting-started.html">here</a> for learning complete setup of your Raspberry PI.</p>
 <p>Install the Raspberry PI imager by clicking <a href="https://www.raspberrypi.com/software/">this link.</a></p>
@@ -36,7 +66,7 @@ sudo reboot
 ```
 sudo raspi-config
 ```
-After issuing this command, you will be looking something like this
+<p>After issuing this command, you will be looking something like this</p>
 
 ```
 Raspberry Pi 4 Model B Rev 1.5
@@ -97,6 +127,7 @@ sudo apt-get install -y espeak
 pip3 install imutils
 ```
 
+<p>Simply copy and paste it, things followed by # (the description of a particular module being installed) are treated as comments by shell interpreter (Linux terminal in this case)</p>
 <p>If you are facing the externally managed environment due to installing modules using pip, then simply remove the <code>EXTERNALLY-MANAGED</code> file by</p>
 
 ```
