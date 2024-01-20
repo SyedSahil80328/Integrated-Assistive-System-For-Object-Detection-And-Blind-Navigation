@@ -26,25 +26,54 @@
 <li>Keyboard.</li>
 <li>HDMI to micro HDMI cable or adapter.</li>
 </ol>
-<i><sup>1</sup>If you have only VGA port in your monitor and doesn't support audio, a VGA to HDMI adapter with an audio device is needed.</i>
-<p>For wireless usage, you should enable SSH (given <a href="https://www.raspberrypi.com/documentation/computers/getting-started.html#install-using-imager">here</a>).<br>
-Then issue the command.
+<p><i><sup>1</sup>If you have only VGA port in your monitor and doesn't support audio, a VGA to HDMI adapter with an audio device is needed.</i></p>
+<p>For wireless usage, you should enable SSH (given <a href="https://www.raspberrypi.com/documentation/computers/getting-started.html#install-using-imager">here</a>). Then issue the command.
 
 ```
 ssh pi@192.168.29.165 #Replace it with actual username of PI and IP address of your device.
 ```
+
+Then provide your password to get connected (Give yes for the message after encountering a message if you are logging in for first time).
 </p>
-<i>
+<p>You'll be logged in as shown in the picture</p>
+<img src="https://github.com/syed-sahil-100/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation/blob/main/Manual%20Pictures/login-SSH.png">
+
+<p><i>
 <b>Note:</b> Both PI and operating device must be in same Wi-Fi network.<br>
 <b>Tips:</b> After connecting the operating device to a Wi-Fi, you can find IP address through the application <a href="https://www.fing.com/products/fing-desktop">fing</a>.
-</i>
+</i></p>
 <p>To have seamless experience, we recommend using wired method as it is easy and doesn't require internet (except for installation and upgrading required modules).</p>
+
+<h1>Usage through VNC</h1>
+<p>Turn on your PI and connect via your device through SSH. Then issue the command.</p>
+
+```
+sudo raspi-config
+```
+
+<p>Then select interface option by hitting enter button on <code>Interface Options</code> (Control through up/down arrow buttons) as shown.</p>
+<img src="https://github.com/syed-sahil-100/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation/blob/main/Manual%20Pictures/raspi-config.png">
+
+<p>Then select VNC</p>
+<img src="https://github.com/syed-sahil-100/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation/blob/main/Manual%20Pictures/config-interface.png">
+
+<p>Then select <code>Yes</code> (control by left/right arrow and hit enter)</p>
+<img src="https://github.com/syed-sahil-100/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation/blob/main/Manual%20Pictures/interface-VNC.png">
+
+<p>After clicking yes, you'll see a couple of output as shown.</p>
+<img src="https://github.com/syed-sahil-100/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation/blob/main/Manual%20Pictures/VNC-success-console.png">
+<img src="https://github.com/syed-sahil-100/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation/blob/main/Manual%20Pictures/VNC-success.png">
+
+<p>Select <code>OK</code> and hit finish</p>
+<img src="https://github.com/syed-sahil-100/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation/blob/main/Manual%20Pictures/raspi-config-finish.png">
+
 <h1>Basic Installation</h1>
 <p>Refer <a href="https://www.raspberrypi.com/documentation/computers/getting-started.html">here</a> for learning complete setup of your Raspberry PI.</p>
 <p>Install the Raspberry PI imager by clicking <a href="https://www.raspberrypi.com/software/">this link.</a></p>
 <p>Note: You can also install it with NOOBS <i>(New Out Of Box Software)</i> by clicking <a href="https://www.raspberrypi.com/news/introducing-noobs/">this link.</a></p>
 <p>After installing, your Raspberry PI interface will look like this:</p>
 <img src="https://www.raspberrypi.com/documentation/computers/images/recommended-software.png">
+
 <h1>Upgrading the PI</h1>
 <p>First, you'll need to make some upgrades on your PI via terminal</p>
 
