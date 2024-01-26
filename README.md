@@ -18,11 +18,35 @@
 <sup>3</sup>Wired is recommended, as wireless connection requires desktop setting for initiating or manipulating connection.
 </i>
 
+<h1>Skipper Part</h1>
+<p>We request the absolute beginners to skip this skipper part.</p>
+<br>
+<p>This markdown file is created with intention to provide clarified explanations for absolute beginners. So, it'll contain the steps for the one who are getting started with Raspberry PI Computer. If you are well aware of Raspberry PI and already using it through desktop mode or remote mode (SSH or VNC or both), we don't want you to waste time by scrolling down all the upcoming images. You can directly go to the steps for running the program for object detection with vocal assistance.</p>
+<p><a href="https://github.com/SyedSahil80328/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation#installing-neccessary-modules">Steps for running our project.</a></p>
+<p>Note: If you haven't enabled the camera option (without enabling it makes our program to fail) though you have <a href="https://github.com/SyedSahil80328/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation#upgrading-the-pi">upgraded the PI</a> (Click if you haven't upgraded it yet) please <a href="https://github.com/SyedSahil80328/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation#enabling-camera-option">don't skip it</a>.</p>
+
+<h1>What is Raspberry PI?</h1>
+<p>Raspberry Pi is a series of small, affordable, single-board computers developed by the Raspberry Pi Foundation, a UK-based charity organization. The primary goal of the Raspberry Pi project is to promote computer science education and enable people of all ages to learn about programming and computing in a hands-on and cost-effective way.<br>
+Key features and aspects of Raspberry Pi include:</p>
+<ol>
+<li><b>Affordability:</b> Raspberry Pi boards are priced reasonably, making them accessible to a wide audience, including students, hobbyists, and professionals.</li>
+<li><b>Versatility:</b> Despite their small size, Raspberry Pi computers are versatile and can be used for various purposes, including desktop computing, programming, DIY projects, home automation, robotics, and more.</li>
+<li><b>Hardware:</b> Raspberry Pi boards typically include various ports for peripherals, GPIO (General Purpose Input/Output) pins for hardware interfacing, HDMI for video output, USB ports, and networking capabilities.</li>
+<li><b>Community and Support:</b> The Raspberry Pi community is large and active, with a wealth of online resources, forums, and tutorials. This strong community support contributes to the ease of learning and troubleshooting.</li>
+<li><b>Educational Value:</b> Raspberry Pi is widely used in schools and educational institutions to teach programming and computer science. Its low cost allows for widespread adoption in educational settings.</li>
+<li><b>DIY Projects:</b> Raspberry Pi is popular for DIY (Do It Yourself) projects, allowing enthusiasts to create custom solutions for various applications, such as media centers, home servers, retro gaming consoles, and more.</li>
+<li><b>Open Source:</b> The Raspberry Pi operating system, Raspbian (now called Raspberry Pi OS), is based on Linux and is open source. This encourages a culture of sharing and collaboration.</li>
+<li><b>Low Power Consumption:</b> Raspberry Pi boards are energy-efficient and have low power requirements, making them suitable for projects where power consumption is a concern.</li>
+<li><b>Continuous Development:</b> The Raspberry Pi Foundation regularly releases new models with improved hardware specifications, ensuring that the platform stays relevant and up-to-date.</li>
+</ol>
+<p>The importance of Raspberry Pi lies in its role in democratizing access to computing and providing a platform for learning, experimentation, and innovation. It has become a valuable tool for introducing individuals, especially students, to the world of programming and electronics, fostering creativity and problem-solving skills. Additionally, its affordability and versatility make it an excellent choice for a wide range of practical applications in various fields.</p>
+
 <h1>Basic Installation</h1>
 <p>Refer <a href="https://www.raspberrypi.com/documentation/computers/getting-started.html">here</a> for learning complete setup of your Raspberry PI.</p>
-<p>Install the Raspberry PI imager by clicking <a href="https://www.raspberrypi.com/software/">this link.</a></p>
-<p>Note: You can also install it with NOOBS <i>(New Out Of Box Software)</i> by clicking <a href="https://www.raspberrypi.com/news/introducing-noobs/">this link.</a></p>
-<p>After installing, your Raspberry PI interface will be looking as shown in Figure 1</p>
+<p>
+<a href="https://www.raspberrypi.com/software/">Download Raspberry PI Imager.</a><br>
+<a href="https://www.raspberrypi.com/news/introducing-noobs/">Go through the installation of OS via NOOBS (<i>New Out Of Box Software</i>).</a></p>
+<p>After installing, your Raspberry PI interface will be looking as shown in Figure 1.</p>
 <img src="https://www.raspberrypi.com/documentation/computers/images/recommended-software.png">
 <p align="center"><i>Figure 1: Raspberry PI Interactive OS</i></p>
 
@@ -48,7 +72,7 @@ ssh pi@192.168.29.165 #Replace it with actual username of PI and IP address of y
 ```
 
 <p>Then provide your password to get connected (Give yes for the message after encountering a message if you are logging in for first time).</p>
-<p>You'll be logged in as shown in figure 3</p>
+<p>You'll be logged in as shown in figure 3.</p>
 <img src="https://github.com/syed-sahil-100/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation/blob/main/Manual%20Pictures/login-SSH.png">
 <p align="center"><i>Figure 3: Login through SSH</i></p>
 
@@ -84,7 +108,7 @@ sudo raspi-config
 <img src="https://github.com/syed-sahil-100/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation/blob/main/Manual%20Pictures/VNC-success.png">
 <p align="center"><i>Figure 7b: Output of activation on raspi-config</i></p>
 
-<p>Select <code>OK</code> and hit finish</p>
+<p>Select <code>OK</code> and hit finish.</p>
 <img src="https://github.com/syed-sahil-100/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation/blob/main/Manual%20Pictures/raspi-config-finish.png">
 <p align="center"><i>Figure 8: Exiting the raspi-config</i></p>
 
@@ -98,7 +122,7 @@ sudo raspi-config
 <p align="center"><i>Figure 10: Providing neccessary details</i></p>
 
 <p>Then, a computer icon as shown in Figure 11 is created. You can rename it by pressing F2. You need to click that icon and enter username and password as indicated in figure 12.</p>
-<p align="center"><img src="https://github.com/syed-sahil-100/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation/blob/main/Manual%20Pictures/VNC-new.png" width="75%"></p>
+<p align="center"><img src="https://github.com/syed-sahil-100/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation/blob/main/Manual%20Pictures/VNC-new-user.png" width="75%"></p>
 <p align="center"><i>Figure 11: New device creation</i></p>
 
 <p float="left">
@@ -134,15 +158,15 @@ sudo reboot
 ```
 sudo raspi-config
 ```
-<p>After issuing this command, you will be looking something as shown in figure 14</p>
+<p>After issuing this command, you will be looking something as shown in figure 14.</p>
 <img src="https://github.com/syed-sahil-100/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation/blob/main/Manual%20Pictures/raspi-config.png">
 <p align="center"><i>Figure 14: Raspi Config Interface</i></p>
 
 <p>It'll be controlled by arrows. Go to Interface options and enable Camera or Legacy Camera. If you don't have that option, don't worry, we faced the same thing implying that camera is automatically in active state.</p>
-<p>It requires rebooting, so issue the command given for rebooting</p>
+<p>It requires rebooting, so issue the command given for <a href="https://github.com/SyedSahil80328/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation?tab=readme-ov-file#upgrading-the-pi" >rebooting</a>.</p>
 
 <h1>Installing neccessary modules</h1>
-<p>Here, we are going to install all required modules from pip and sudo. Issue the commands given below</p>
+<p>Here, we are going to install all required modules from pip and sudo. Issue the commands given below.</p>
 
 ```
 # Install Python development tools and package manager
@@ -175,7 +199,7 @@ sudo apt-get install -y espeak
 pip3 install imutils
 ```
 
-<p>Simply copy and paste it, things followed by # (the description of a particular module being installed) are treated as comments by shell interpreter (Linux terminal in this case)</p>
+<p>Simply copy and paste it, things followed by # (the description of a particular module being installed) are treated as comments by shell interpreter (Linux terminal in this case).</p>
 <p>If you are facing the externally managed environment due to installing modules using pip, then simply remove the <code>EXTERNALLY-MANAGED</code> file by</p>
 
 ```
@@ -187,7 +211,7 @@ sudo rm EXTERNALLY-MANAGED
 
 ```
 cd Desktop
-git clone https://github.com/syed-sahil-100/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation.git
+git clone https://github.com/SyedSahil80328/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation.git
 mv Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation.git blindhelper
 ```
 <p>We are shrinking the path name, as remembering such a big name is tedious. You can give your own name. But recommended to keep the name as it is.</p>
