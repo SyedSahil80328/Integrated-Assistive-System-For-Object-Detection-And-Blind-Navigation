@@ -1,5 +1,10 @@
 <h1>Integrated Assistive System For Object Detection And Blind Navigation</h1>
 <p>Embark on a transformative journey towards enhanced accessibility and independence with our innovative repository, 'Integrated Assistive System for Object Detection and Blind Navigation.' This comprehensive solution seamlessly combines cutting-edge object detection capabilities and intelligent blind navigation technologies. Empower individuals with visual impairments to navigate their surroundings confidently, fostering a more inclusive and connected world.</p>
+<p><i>Note: Use Ctrl/Cmd+Click or Click scroll button on hyperlinks to retain our markdown file.</i></p>
+
+<h1>A kind request</h1>
+<p>This project is not yet completed. It is expected to be completed at the beginning of this March. So, please wait for error-free execution of our project. Still, you can read this file for getting started with Raspberry PI and installing basic requirements.</p>
+
 <h1>Basic Hardware Requirements</h1>
 <ol>
 <li>Raspberry PI Computer.<sup><i>1</i></sup></li>
@@ -19,8 +24,7 @@
 </i>
 
 <h1>Skipper Part</h1>
-<p>We request the absolute beginners to skip this skipper part.</p>
-<br>
+<p>We request the absolute beginners to skip this skipper part and go to <a href="https://github.com/SyedSahil80328/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation#what-is-raspberry-pi">What is Raspberry PI</a>.</p>
 <p>This markdown file is created with intention to provide clarified explanations for absolute beginners. So, it'll contain the steps for the one who are getting started with Raspberry PI Computer. If you are well aware of Raspberry PI and already using it through desktop mode or remote mode (SSH or VNC or both), we don't want you to waste time by scrolling down all the upcoming images. You can directly go to the steps for running the program for object detection with vocal assistance.</p>
 <p><a href="https://github.com/SyedSahil80328/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation#installing-neccessary-modules">Steps for running our project.</a></p>
 <p>Note: If you haven't enabled the camera option (without enabling it makes our program to fail) though you have <a href="https://github.com/SyedSahil80328/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation#upgrading-the-pi">upgraded the PI</a> (Click if you haven't upgraded it yet) please <a href="https://github.com/SyedSahil80328/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation#enabling-camera-option">don't skip it</a>.</p>
@@ -45,7 +49,9 @@ Key features and aspects of Raspberry Pi include:</p>
 <p>Refer <a href="https://www.raspberrypi.com/documentation/computers/getting-started.html">here</a> for learning complete setup of your Raspberry PI.</p>
 <p>
 <a href="https://www.raspberrypi.com/software/">Download Raspberry PI Imager.</a><br>
-<a href="https://www.raspberrypi.com/news/introducing-noobs/">Go through the installation of OS via NOOBS (<i>New Out Of Box Software</i>).</a></p>
+<a href="https://www.raspberrypi.com/news/introducing-noobs/">Go through the installation of OS via NOOBS (<i>New Out Of Box Software</i>).</a><br>
+<a href="https://github.com/raspberrypi/noobs">Install NOOBS from the official github repository of Raspberry PI</a></p>
+<p>However, the NOOBS is now obsolete and is not updated regularly. For getting regularly updated Operating System, we recommend to install it with Raspberry PI imager.</p>
 <p>After installing, your Raspberry PI interface will be looking as shown in Figure 1.</p>
 <img src="https://www.raspberrypi.com/documentation/computers/images/recommended-software.png">
 <p align="center"><i>Figure 1: Raspberry PI Interactive OS</i></p>
@@ -68,7 +74,7 @@ Key features and aspects of Raspberry Pi include:</p>
 <p align="center"><i>Figure 2: Enabling SSH by clicking Ctrl+Shift+X on Image 1 to open Image 2</i></p>
 
 ```
-ssh pi@192.168.29.165 #Replace it with actual username of PI and IP address of your device.
+ssh mass@192.168.29.165 #Replace "mass" with your actual username and "192.168.29.165" with the actual detected IP address of your device.
 ```
 
 <p>Then provide your password to get connected (Give yes for the message after encountering a message if you are logging in for first time).</p>
@@ -203,7 +209,7 @@ pip3 install imutils
 <p>If you are facing the externally managed environment due to installing modules using pip, then simply remove the <code>EXTERNALLY-MANAGED</code> file by</p>
 
 ```
-cd /usr/lib/python3.11 #Replace with your actual python version
+cd /usr/lib/python3.11 #Replace "3.11" with your actual python version
 sudo rm EXTERNALLY-MANAGED
 ```
 <h1>Cloning this Rep</h1>
@@ -216,11 +222,55 @@ mv Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation.git bli
 ```
 <p>We are shrinking the path name, as remembering such a big name is tedious. You can give your own name. But recommended to keep the name as it is.</p>
 
+<h1>Adjusting Terminal's Default Directory</h1>
+<p>Amazingly, we can change the default directory that the terminal will open. To do this, we can edit the <code>.bashrc</code> file by running the command given below.</p>
+
+```
+nano ~/.bashrc
+```
+
+<p>Append the line given below at the end of the file.</p>
+
+```
+cd /home/mass/Desktop/blindhelper #Replace "mass" with your actual username
+```
+
+<p>Save it and close. On restarting it, the terminal should open with the specified location.</p>
+
 <h1>Running the code</h1>
 <p>Running the script creates a popup showing capture from your camera with detected objects with distance away from the camera. If an object or person is near to the blind (camera in this case), pyttsx3 module conveys the message in voice format like Move away. It can be run by</p>
 
 ```
-python3 /home/pi/Desktop/blindhelper/objectdetector.py
+python3 /home/mass/Desktop/blindhelper/objectdetector.py #Replace "mass" with your actual username
 ```
 
+<p>You will see the output with video streaming. To quit, press q.</p>
 
+<h1>Launching the code automatically</h1>
+<p>If you want to demonstrate it as a software only project, then we optionally require to self start our script. Since we are doing it as a portable hardware product, we cannot rely everytime on SSH or VNC for manually starting it from our laptop. Raspberry PI offers you with a service file called crontab which accepts the shell commands and make the PI react accordingly in an automated manner. To do this, we have created a launcher script file which is present on the renamed folder (blindhelper in our case) which is the same folder as our python script presents. You are required to issue the command to open the crontab file.</p>
+
+```
+sudo crontab -e
+```
+
+<p><i>Note: For first time users of crontab, it'll show you a list of editors to be opened. Simply click the number which opens nano editor.</i></p>
+<p>Now, we have opened our crontab file. Next, copy the below text and paste it at the end of file.</p>
+
+```
+@reboot Xvfb :1 -screen 0 1920x1080x24 & export DISPLAY=:1 && /home/mass/Desktop/Obj-Detect-and-Depth/object-detect/launcher.sh > /home/mass/Desktop/Obj-Detect-and-Depth/object-detect/cronlog 2>&1
+```
+
+<p>Save it and close. To make this command to work, you need to install a Virtual Framebuffer called Xvfb which is a tool that enables you to run graphical applications headlessly in the background without a monitor. Issue the command below.</p>
+
+```
+sudo apt-get install xvfb
+```
+
+<p>You can check it by running the command given below.</p>
+
+```
+chmod +x launcher.sh #Make it executable
+xvfb-run -a ./launcher.sh
+```
+
+<p>After checking with your video streaming, simply reboot the Raspberry PI to make the edited crontab file to run at startup. After seeing with the desktop, you should be able to see the output with voice navigation automatically.</p>
