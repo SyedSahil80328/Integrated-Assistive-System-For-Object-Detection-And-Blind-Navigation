@@ -7,7 +7,6 @@ from constants import *
 from methods import *
 
 # Camera Object
-#cap = cv2.VideoCapture(0, cv2.CAP_V4L2) # For RPI
 cap = cv2.VideoCapture(0)  # Number According to Camera Lap
 #cap = cv2.VideoCapture("rtsp://admin:admin@192.168.198.185:1935")  # Number According to Camera
 face_model = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
