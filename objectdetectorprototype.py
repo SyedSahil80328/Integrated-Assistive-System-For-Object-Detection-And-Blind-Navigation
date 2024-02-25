@@ -7,7 +7,7 @@ from constants import *
 from methods import *
 
 # Camera Object
-cap = cv2.VideoCapture(0, cv2.CAP_V4L2)  # Number According to Camera
+cap = cv2.VideoCapture(0)  # Number According to Camera
 #cap = cv2.VideoCapture("rtsp://admin:admin@192.168.198.185:1935")  # Number According to Camera
 face_model = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 Distance_level = 0
@@ -21,7 +21,7 @@ out = cv2.VideoWriter('output21.avi', fourcc, 30.0, (640, 480))
 net = setDetectionModel();
 
 # reading reference image from directory
-ref_image = cv2.imread("lena.png")
+ref_image = cv2.imread("face.png")
 ref_image_face_width, _, _, _ = face_data(ref_image, False, Distance_level)
 Focal_length_found = FocalLength(Known_distance, Known_width, ref_image_face_width)
 print(Focal_length_found)
