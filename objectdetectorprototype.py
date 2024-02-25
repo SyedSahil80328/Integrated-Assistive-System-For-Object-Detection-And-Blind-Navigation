@@ -7,7 +7,8 @@ from constants import *
 from methods import *
 
 # Camera Object
-cap = cv2.VideoCapture(0, cv2.CAP_V4L2)  # Number According to Camera
+# cap = cv2.VideoCapture(0, cv2.CAP_V4L2) # For RPI
+cap = cv2.VideoCapture(0)  # Number According to Camera
 #cap = cv2.VideoCapture("rtsp://admin:admin@192.168.198.185:1935")  # Number According to Camera
 face_model = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 Distance_level = 0
@@ -18,10 +19,10 @@ fourcc = cv2.VideoWriter_fourcc(*'XVID')
 #out = cv2.VideoWriter('output21.mp4', fourcc, 30.0, (640, 480))
 out = cv2.VideoWriter('output21.avi', fourcc, 30.0, (640, 480))
  
-net = setDetectionModel();
+net = setDetectionModel()
 
 # reading reference image from directory
-ref_image = cv2.imread("lena.png")
+ref_image = cv2.imread("face.png")
 ref_image_face_width, _, _, _ = face_data(ref_image, False, Distance_level)
 Focal_length_found = FocalLength(Known_distance, Known_width, ref_image_face_width)
 print(Focal_length_found)
@@ -60,7 +61,8 @@ while True:
             
             if len(classIds) > 0 and 0 <= i < len(classIds):
                 if 10 < Distance < 50:
-                    engine.say(f"Move Away from {classNames[classIds[i] - 1]}")
+                    object_name = classNames[classIds[i] - 1]
+                    engine.say(f"Move Away from {object_name}")
                     engine.runAndWait()
                 elif Distance >= 50:
                     engine.stop()
@@ -110,7 +112,8 @@ while True:
 
         if D < 250 and D != 0:
             frame = cv2.putText(frame, "!!MOVE AWAY!!", (100, 100), cv2.FONT_HERSHEY_SIMPLEX, 2, [0, 0, 255], 4)
-            engine.say(f"Move Away from object")
+            object_name = classNames[classIds[i] - 1]
+            engine.say(f"Move Away from {object_name}")
             engine.runAndWait()
         elif D >= 250:
                 engine.stop()
