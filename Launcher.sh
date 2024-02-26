@@ -8,5 +8,5 @@ export XDG_RUNTIME_DIR=/run/user/$(id -u)
 echo "Setting actual permissions for runtime directory"
 sudo chmod 0700 /run/user/1000
 echo "Running Python script"
-python3 I.py
+python3 IASDriver.py
 cd
