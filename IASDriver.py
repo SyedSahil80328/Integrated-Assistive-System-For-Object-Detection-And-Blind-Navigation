@@ -15,8 +15,8 @@ colors = np.random.uniform(0, 255, size=(len(classNames), 3))
 
 # Define the codec and create VideoWriter object
 fourcc = cv2.VideoWriter_fourcc(*'XVID')
-#out = cv2.VideoWriter('output21.mp4', fourcc, 30.0, (640, 480))
-out = cv2.VideoWriter('output21.avi', fourcc, 30.0, (640, 480))
+#out = cv2.VideoWriter('OutputVideo.mp4', fourcc, 30.0, (640, 480))
+out = cv2.VideoWriter('OutputVideo.avi', fourcc, 30.0, (640, 480))
 
 net = setDetectionModel()
 
@@ -81,7 +81,7 @@ while True:
     stackY = []
     stackXPrint = []
     stackYPrint = []
-    global D
+    global d
 
     if len(bbox) == 0:
         pass
@@ -103,21 +103,21 @@ while True:
             frame = cv2.rectangle(frame, (x1, y1), (x2, y2), [0, 0, 255], 2)
 
         if len(bbox) == 2:
-            D = int(dist.euclidean((stackX.pop(), stackY.pop()), (stackX.pop(), stackY.pop())))
+            d = int(dist.euclidean((stackX.pop(), stackY.pop()), (stackX.pop(), stackY.pop())))
             frame = cv2.line(frame, (stackXPrint.pop(), stackYPrint.pop()),
                              (stackXPrint.pop(), stackYPrint.pop()), [0, 0, 255], 2)
         else:
-            D = 0
+            d = 0
 
-        if D < 250 and D != 0:
+        if d < 250 and d != 0:
             frame = cv2.putText(frame, "!!MOVE AWAY!!", (100, 100), cv2.FONT_HERSHEY_SIMPLEX, 2, [0, 0, 255], 4)
             objectName = classNames[classIds[i] - 1]
             engine.say(f"Move Away from {objectName}")
             engine.runAndWait()
-        elif D >= 250:
+        elif d >= 250:
                 engine.stop()
 
-        frame = cv2.putText(frame, str(D / 10) + " cm", (300, 50), cv2.FONT_HERSHEY_SIMPLEX,
+        frame = cv2.putText(frame, str(d / 10) + " cm", (300, 50), cv2.FONT_HERSHEY_SIMPLEX,
                             1, (255, 0, 0), 2, cv2.LINE_AA)
 
         cv2.imshow('Output', frame)
