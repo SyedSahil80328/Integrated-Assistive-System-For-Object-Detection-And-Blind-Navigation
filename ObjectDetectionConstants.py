@@ -1,9 +1,9 @@
 from cv2 import FONT_HERSHEY_PLAIN, FONT_HERSHEY_COMPLEX, FONT_HERSHEY_SCRIPT_SIMPLEX, FONT_HERSHEY_COMPLEX_SMALL, FONT_HERSHEY_TRIPLEX
 
-Known_distance = 30  # Inches
-Known_width = 5.7  # Inches
+knownDistance = 30  # Inches
+knownWidth = 5.7  # Inches
 thres = 0.5  # Threshold to detect object
-nms_threshold = 0.2  # (0.1 to 1) 1 means no suppress, 0.1 means high suppress
+nmsThreshold = 0.2  # (0.1 to 1) 1 means no suppress, 0.1 means high suppress
 
 # Colors  >>> BGR Format(BLUE, GREEN, RED)
 GREEN = (0, 255, 0)
