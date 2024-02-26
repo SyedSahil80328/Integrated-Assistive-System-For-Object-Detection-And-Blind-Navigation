@@ -67,19 +67,20 @@ Key features and aspects of Raspberry Pi include:</p>
 </ol>
 <p><i><sup>1</sup>If you have only VGA port in your monitor and doesn't support audio, a VGA to HDMI adapter with an audio device is needed.</i></p>
 <p>For wireless usage, you should enable SSH as in Figure 2 when imager has been installed for downloading the Operating System for Raspberry PI. Then issue the command.</p>
+
+```
+ssh mass@192.168.xxx.xxx #Replace "mass" with your actual username and "192.168.xxx.xxx" with the actual detected IP address of your device.
+```
+
 <p float="left">
-<img src="https://github.com/syed-sahil-100/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation/blob/main/Manual%20Pictures/pi-imager.png" width="45%">
-<img src="https://github.com/syed-sahil-100/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation/blob/main/Manual%20Pictures/SSH-Save.png" width="45%">
+<img src="https://github.com/SyedSahil80328/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation/blob/main/Manual%20Pictures/pi-imager.png" width="45%">
+<img src="https://github.com/SyedSahil80328/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation/blob/main/Manual%20Pictures/SSH-Save.png" width="45%">
 </p>
 <p align="center"><i>Figure 2: Enabling SSH by clicking Ctrl+Shift+X on Image 1 to open Image 2</i></p>
 
-```
-ssh mass@192.168.29.165 #Replace "mass" with your actual username and "192.168.29.165" with the actual detected IP address of your device.
-```
-
 <p>Then provide your password to get connected (Give yes for the message after encountering a message if you are logging in for first time).</p>
 <p>You'll be logged in as shown in figure 3.</p>
-<img src="https://github.com/syed-sahil-100/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation/blob/main/Manual%20Pictures/login-SSH.png">
+<img src="https://github.com/SyedSahil80328/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation/blob/main/Manual%20Pictures/login-SSH.png">
 <p align="center"><i>Figure 3: Login through SSH</i></p>
 
 <p><i>
@@ -97,48 +98,48 @@ sudo raspi-config
 ```
 
 <p>Then select interface option by hitting enter button on <code>Interface Options</code> (Control through up/down arrow buttons) as shown in Figure 4.</p>
-<img src="https://github.com/syed-sahil-100/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation/blob/main/Manual%20Pictures/raspi-config.png">
+<img src="https://github.com/SyedSahil80328/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation/blob/main/Manual%20Pictures/raspi-config.png">
 <p align="center"><i>Figure 4: Raspi Config Interface</i></p>
 
 <p>Then select VNC (Figure 5).</p>
-<img src="https://github.com/syed-sahil-100/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation/blob/main/Manual%20Pictures/config-interface.png">
+<img src="https://github.com/SyedSahil80328/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation/blob/main/Manual%20Pictures/config-interface.png">
 <p align="center"><i>Figure 5: Selection of VNC</i></p>
 
 <p>Then select <code>Yes</code> (control by left/right arrow and hit enter) shown in Figure 6.</p>
-<img src="https://github.com/syed-sahil-100/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation/blob/main/Manual%20Pictures/interface-VNC.png">
+<img src="https://github.com/SyedSahil80328/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation/blob/main/Manual%20Pictures/interface-VNC.png">
 <p align="center"><i>Figure 6: Enabling VNC</i></p>
 
 <p>After clicking yes, you'll see a couple of output as shown in Figure 7a and 7b.</p>
-<img src="https://github.com/syed-sahil-100/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation/blob/main/Manual%20Pictures/VNC-success-console.png">
+<img src="https://github.com/SyedSahil80328/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation/blob/main/Manual%20Pictures/VNC-success-console.png">
 <p align="center"><i>Figure 7a: Output of activation on console</i></p>
-<img src="https://github.com/syed-sahil-100/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation/blob/main/Manual%20Pictures/VNC-success.png">
+<img src="https://github.com/SyedSahil80328/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation/blob/main/Manual%20Pictures/VNC-success.png">
 <p align="center"><i>Figure 7b: Output of activation on raspi-config</i></p>
 
 <p>Select <code>OK</code> and hit finish.</p>
-<img src="https://github.com/syed-sahil-100/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation/blob/main/Manual%20Pictures/raspi-config-finish.png">
+<img src="https://github.com/SyedSahil80328/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation/blob/main/Manual%20Pictures/raspi-config-finish.png">
 <p align="center"><i>Figure 8: Exiting the raspi-config</i></p>
 
 <p>Cool! We have now enabled VNC for working with Raspberry PI headlessly along with GUI. Next, head over to RealVNC viewer.<br><a href="https://www.realvnc.com/en/connect/download/viewer/">Download RealVNC viewer.</a></p>
 <p>After opening the viewer, create a new connection as shown in figure 9.</p>
-<p align="center"><img src="https://github.com/syed-sahil-100/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation/blob/main/Manual%20Pictures/VNC-new.png" width="75%"></p>
+<p align="center"><img src="https://github.com/SyedSahil80328/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation/blob/main/Manual%20Pictures/VNC-new.png" width="75%"></p>
 <p align="center"><i>Figure 9: Creation of new connection</i></p>
 
 <p>Then provide the same IP address that has been used during SSH login and any friendly name as indicated in figure 10.</p>
-<p align="center"><img src="https://github.com/syed-sahil-100/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation/blob/main/Manual%20Pictures/VNC-credentials.png" width="75%"></p>
+<p align="center"><img src="https://github.com/SyedSahil80328/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation/blob/main/Manual%20Pictures/VNC-credentials.png" width="75%"></p>
 <p align="center"><i>Figure 10: Providing neccessary details</i></p>
 
 <p>Then, a computer icon as shown in Figure 11 is created. You can rename it by pressing F2. You need to click that icon and enter username and password as indicated in figure 12.</p>
-<p align="center"><img src="https://github.com/syed-sahil-100/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation/blob/main/Manual%20Pictures/VNC-new-user.png" width="75%"></p>
+<p align="center"><img src="https://github.com/SyedSahil80328/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation/blob/main/Manual%20Pictures/VNC-new-user.png" width="75%"></p>
 <p align="center"><i>Figure 11: New device creation</i></p>
 
 <p float="left">
-<img src="https://github.com/syed-sahil-100/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation/blob/main/Manual%20Pictures/VNC-first-time.png" width="45%">
-<img src="https://github.com/syed-sahil-100/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation/blob/main/Manual%20Pictures/VNC-login.png" width="45%">
+<img src="https://github.com/SyedSahil80328/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation/blob/main/Manual%20Pictures/VNC-first-time.png" width="45%">
+<img src="https://github.com/SyedSahil80328/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation/blob/main/Manual%20Pictures/VNC-login.png" width="45%">
 </p>
 <p align="center"><i>Figure 12: Login through VNC</i></p>
 
 <p>After clicking OK button, it'll take a couple of seconds to show an interface as in Figure 13.</p>
-<img src="https://github.com/syed-sahil-100/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation/blob/main/Manual%20Pictures/VNC-success-output.png">
+<img src="https://github.com/SyedSahil80328/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation/blob/main/Manual%20Pictures/VNC-success-output.png">
 <p align="center"><i>Figure 13: Raspberry PI desktop through VNC</i></p>
 
 <p>That's it, now we can rock and roll by using either wired or wireless method.</p>
@@ -165,7 +166,7 @@ sudo reboot
 sudo raspi-config
 ```
 <p>After issuing this command, you will be looking something as shown in figure 14.</p>
-<img src="https://github.com/syed-sahil-100/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation/blob/main/Manual%20Pictures/raspi-config.png">
+<img src="https://github.com/SyedSahil80328/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation/blob/main/Manual%20Pictures/raspi-config.png">
 <p align="center"><i>Figure 14: Raspi Config Interface</i></p>
 
 <p>It'll be controlled by arrows. Go to Interface options and enable Camera or Legacy Camera. If you don't have that option, don't worry, we faced the same thing implying that camera is automatically in active state.</p>
@@ -237,11 +238,19 @@ cd /home/mass/Desktop/blindhelper #Replace "mass" with your actual username
 
 <p>Save it and close. On restarting it, the terminal should open with the specified location.</p>
 
+<h1>Program Split Up</h1>
+<p>It consists of three python codes with functionalities listed below:</p>
+<ol>
+<li><code>IASDriver.py</code>: The Main Object detection program.</li>
+<li><code>ObjectDetectionConstants.py</code>: Contains required Constants for running the main script.</li>
+<li><code>ObjectDetectionMethods.py</code>: Contains utility methods for running the main script.</li>
+</ol>
+
 <h1>Running the code</h1>
 <p>Running the script creates a popup showing capture from your camera with detected objects with distance away from the camera. If an object or person is near to the blind (camera in this case), pyttsx3 module conveys the message in voice format like Move away. It can be run by</p>
 
 ```
-python3 /home/mass/Desktop/blindhelper/objectdetector.py #Replace "mass" with your actual username
+python3 /home/mass/Desktop/blindhelper/IASDriver.py #Replace "mass" with your actual username
 ```
 
 <p>You will see the output with video streaming. To quit, press q.</p>
@@ -257,7 +266,7 @@ sudo crontab -e
 <p>Now, we have opened our crontab file. Next, copy the below text and paste it at the end of file.</p>
 
 ```
-@reboot Xvfb :1 -screen 0 1920x1080x24 & export DISPLAY=:1 && /home/mass/Desktop/Obj-Detect-and-Depth/object-detect/launcher.sh > /home/mass/Desktop/Obj-Detect-and-Depth/object-detect/cronlog 2>&1
+@reboot Xvfb :1 -screen 0 1920x1080x24 & export DISPLAY=:1 && /home/mass/Desktop/blindhelper/launcher.sh > /home/mass/Desktop/blindhelper/cronlog 2>&1
 ```
 
 <p>Save it and close. To make this command to work, you need to install a Virtual Framebuffer called Xvfb which is a tool that enables you to run graphical applications headlessly in the background without a monitor. Issue the command below.</p>
