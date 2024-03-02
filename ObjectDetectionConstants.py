@@ -26,11 +26,11 @@ fonts2 = FONT_HERSHEY_SCRIPT_SIMPLEX
 fonts3 = FONT_HERSHEY_COMPLEX_SMALL
 fonts4 = FONT_HERSHEY_TRIPLEX
 
-classNames = ["person", "bicycle", "car", "motorcycle", "airplane", "bus", "train", "truck", "boat", "traffic light", 
-              "fire hydrant", "street sign", "stop sign", "parking meter", "bench", "bird", "cat", "dog", "horse", "sheep", "cow", 
-              "elephant", "bear", "zebra", "giraffe", "hat", "backpack", "umbrella", "shoe", "eye glasses", "handbag", "tie", "suitcase", 
-              "frisbee", "skis", "snowboard", "sports ball", "kite", "baseball bat", "baseball glove", "skateboard", "surfboard", "tennis racket", 
-              "bottle", "plate", "wine glass", "cup", "fork", "knife", "spoon", "bowl", "banana", "apple", "sandwich", "orange", "broccoli", 
-              "carrot", "hot dog", "pizza", "donut", "cake", "chair", "couch", "plant", "bed", "mirror", "dining table", "window", 
-              "desk", "toilet", "door", "tv", "laptop", "mouse", "remote", "keyboard", "cell phone", "microwave", "oven", "toaster", 
-              "sink", "refrigerator", "blender", "book", "clock", "vase", "scissors", "teddy bear", "hair drier", "toothbrush", "hair brush"]
+classNames = ["A person", "A bicycle", "A car", "A motorcycle", "An airplane", "A bus", "A train", "A truck", "A boat", "A traffic light", 
+              "A fire hydrant", "A street sign", "A stop sign", "A parking meter", "A bench", "A bird", "A cat", "A dog", "A horse", "A sheep", "A cow", 
+              "An elephant", "A bear", "A zebra", "A giraffe", "A hat", "A backpack", "An umbrella", "A shoe", "Eye glasses", "A handbag", "A tie", "A suitcase", 
+              "A frisbee", "Skis", "A snowboard", "A sports ball", "A kite", "A baseball bat", "A baseball glove", "A skateboard", "A surfboard", "A tennis racket", 
+              "A bottle", "A plate", "A wine glass", "A cup", "A fork", "A knife", "A spoon", "A bowl", "A banana", "An apple", "A sandwich", "An orange", "A broccoli", 
+              "A carrot", "A hot dog", "A pizza", "A donut", "A cake", "A chair", "A couch", "A potted plant", "A bed", "A mirror", "A dining table", "A window", 
+              "A desk", "A toilet", "A door", "A TV", "A laptop", "A mouse", "A remote", "A keyboard", "A cell phone", "A microwave", "An oven", "A toaster", 
+              "A sink", "A refrigerator", "A blender", "A book", "A clock", "A vase", "Scissors", "A teddy bear", "A hair drier", "A toothbrush", "A hair brush"]
