@@ -1,5 +1,6 @@
-from cv2 import cvtColor, COLOR_BGR2GRAY, line, CascadeClassifier, dnn_DetectionModel
+from cv2 import cvtColor, COLOR_BGR2GRAY, line, CascadeClassifier, dnn_DetectionModel, VideoCapture
 from ObjectDetectionConstants import GREEN, ORANGE, YELLOW
+import socket
 
 faceDetector = CascadeClassifier("IASCascadeClassifier.xml")
 
@@ -18,6 +19,21 @@ def setDetectionModel ():
     outputNet.setInputSwapRB(True)
     
     return outputNet
+
+def internetConnected():
+    try:
+        # Try connecting to Google's public DNS server
+        socket.create_connection(("8.8.8.8", 53), timeout=5)
+        return True
+    except OSError:
+        pass
+    return False
+    
+def cameraConnected():
+    capture = VideoCapture(0)
+    if not capture.isOpened():
+        return False
+    return True
 
 # focal length finder function
 def focalLength(measuredDistance, realWidth, widthInRfImage):
