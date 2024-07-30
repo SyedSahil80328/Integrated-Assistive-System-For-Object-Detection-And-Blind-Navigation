@@ -1,72 +1,81 @@
-<h1>Integrated Assistive System For Object Detection And Blind Navigation</h1>
-<p>Embark on a transformative journey towards enhanced accessibility and independence with our innovative repository, 'Integrated Assistive System for Object Detection and Blind Navigation.' This comprehensive solution seamlessly combines cutting-edge object detection capabilities and intelligent blind navigation technologies. Empower individuals with visual impairments to navigate their surroundings confidently, fostering a more inclusive and connected world.</p>
-<p><i>Note: Use Ctrl/Cmd+Click or Click scroll button on hyperlinks to retain our markdown file.</i></p>
+# Integrated Assistive System For Object Detection And Blind Navigation
 
-<h1>A kind request</h1>
-<p>This project is not yet completed. It is expected to be completed at the beginning of this March. So, please wait for error-free execution of our project. Still, you can read this file for getting started with Raspberry PI and installing basic requirements.</p>
+Embark on a transformative journey towards enhanced accessibility and independence with our innovative repository, **Integrated Assistive System for Object Detection and Blind Navigation.** This comprehensive solution seamlessly combines cutting-edge object detection capabilities and intelligent blind navigation technologies. Empower individuals with visual impairments to navigate their surroundings confidently, fostering a more inclusive and connected world.
 
-<h1>Basic Hardware Requirements</h1>
-<ol>
-<li>Raspberry PI Computer.<sup><i>1</i></sup></li>
-<li>Micro SD Card.<sup><i>2</i></sup></li>
-<li>Raspberry PI adapter or battery.</li>
-<li>Raspberry PI Fan.</li>
-<li>Any type of light weight cap.</li>
-<li>Speaker or Headphones.<sup><i>3</i></sup></li>
-<li>PI Camera or USB Webcam.</li>
-<li>Raspberry PI Case.</li>
-<li>Raspberry PI Heatsink.</li>
-</ol>
-<i>
-<sup>1</sup>Version 4 or Higher with Main memory of 8 Gigabytes.<br>
-<sup>2</sup>32 Gigabytes is sufficient, but 64 is recommended for development purpose and avoiding storage shortage.<br>
-<sup>3</sup>Wired is recommended, as wireless connection requires desktop setting for initiating or manipulating connection.
-</i>
+*Note: Use Ctrl/Cmd+Click or Click scroll button on hyperlinks to retain our markdown file.*
 
-<h1>Skipper Part</h1>
-<p>We request the absolute beginners to skip this skipper part and go to <a href="https://github.com/SyedSahil80328/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation#what-is-raspberry-pi">What is Raspberry PI</a>.</p>
-<p>This markdown file is created with intention to provide clarified explanations for absolute beginners. So, it'll contain the steps for the one who are getting started with Raspberry PI Computer. If you are well aware of Raspberry PI and already using it through desktop mode or remote mode (SSH or VNC or both), we don't want you to waste time by scrolling down all the upcoming images. You can directly go to the steps for running the program for object detection with vocal assistance.</p>
-<p><a href="https://github.com/SyedSahil80328/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation#installing-neccessary-modules">Steps for running our project.</a></p>
-<p>Note: If you haven't enabled the camera option (without enabling it makes our program to fail) though you have <a href="https://github.com/SyedSahil80328/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation#upgrading-the-pi">upgraded the PI</a> (Click if you haven't upgraded it yet) please <a href="https://github.com/SyedSahil80328/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation#enabling-camera-option">don't skip it</a>.</p>
+# Basic Hardware Requirements
+1. Raspberry PI Computer.<sup>*1*</sup>
+1. Micro SD Card.<sup>*2*</sup>
+1. Raspberry PI adapter or battery.
+1. Raspberry PI Fan.
+1. Any type of light weight cap.
+1. Speaker or Headphones.<sup>*3*</sup>
+1. PI Camera or USB Webcam.
+1. Raspberry PI Case.
+1. Raspberry PI Heatsink.
 
-<h1>What is Raspberry PI?</h1>
-<p>Raspberry Pi is a series of small, affordable, single-board computers developed by the Raspberry Pi Foundation, a UK-based charity organization. The primary goal of the Raspberry Pi project is to promote computer science education and enable people of all ages to learn about programming and computing in a hands-on and cost-effective way.<br>
-Key features and aspects of Raspberry Pi include:</p>
-<ol>
-<li><b>Affordability:</b> Raspberry Pi boards are priced reasonably, making them accessible to a wide audience, including students, hobbyists, and professionals.</li>
-<li><b>Versatility:</b> Despite their small size, Raspberry Pi computers are versatile and can be used for various purposes, including desktop computing, programming, DIY projects, home automation, robotics, and more.</li>
-<li><b>Hardware:</b> Raspberry Pi boards typically include various ports for peripherals, GPIO (General Purpose Input/Output) pins for hardware interfacing, HDMI for video output, USB ports, and networking capabilities.</li>
-<li><b>Community and Support:</b> The Raspberry Pi community is large and active, with a wealth of online resources, forums, and tutorials. This strong community support contributes to the ease of learning and troubleshooting.</li>
-<li><b>Educational Value:</b> Raspberry Pi is widely used in schools and educational institutions to teach programming and computer science. Its low cost allows for widespread adoption in educational settings.</li>
-<li><b>DIY Projects:</b> Raspberry Pi is popular for DIY (Do It Yourself) projects, allowing enthusiasts to create custom solutions for various applications, such as media centers, home servers, retro gaming consoles, and more.</li>
-<li><b>Open Source:</b> The Raspberry Pi operating system, Raspbian (now called Raspberry Pi OS), is based on Linux and is open source. This encourages a culture of sharing and collaboration.</li>
-<li><b>Low Power Consumption:</b> Raspberry Pi boards are energy-efficient and have low power requirements, making them suitable for projects where power consumption is a concern.</li>
-<li><b>Continuous Development:</b> The Raspberry Pi Foundation regularly releases new models with improved hardware specifications, ensuring that the platform stays relevant and up-to-date.</li>
-</ol>
-<p>The importance of Raspberry Pi lies in its role in democratizing access to computing and providing a platform for learning, experimentation, and innovation. It has become a valuable tool for introducing individuals, especially students, to the world of programming and electronics, fostering creativity and problem-solving skills. Additionally, its affordability and versatility make it an excellent choice for a wide range of practical applications in various fields.</p>
+*<sup>1</sup>Version 4 or Higher with Main memory of 8 Gigabytes.*\
+*<sup>2</sup>32 Gigabytes is sufficient, but 64 is recommended for development purpose and avoiding storage shortage.*\
+*<sup>3</sup>Wired is recommended, as wireless connection requires desktop setting for initiating or manipulating connection.*
 
-<h1>Basic Installation</h1>
-<p>Refer <a href="https://www.raspberrypi.com/documentation/computers/getting-started.html">here</a> for learning complete setup of your Raspberry PI.</p>
-<p>
-<a href="https://www.raspberrypi.com/software/">Download Raspberry PI Imager.</a><br>
-<a href="https://www.raspberrypi.com/news/introducing-noobs/">Go through the installation of OS via NOOBS (<i>New Out Of Box Software</i>).</a><br>
-<a href="https://github.com/raspberrypi/noobs">Install NOOBS from the official github repository of Raspberry PI</a></p>
-<p>However, the NOOBS is now obsolete and is not updated regularly. For getting regularly updated Operating System, we recommend to install it with Raspberry PI imager.</p>
-<p>After installing, your Raspberry PI interface will be looking as shown in Figure 1.</p>
-<img src="https://www.raspberrypi.com/documentation/computers/images/recommended-software.png">
+# Skipper Part
+
+We request the absolute beginners to skip this skipper part and go to [What is Raspberry PI](https://github.com/SyedSahil80328/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation#what-is-raspberry-pi).
+
+This markdown file is created with intention to provide clarified explanations for absolute beginners. So, it'll contain the steps for the one who are getting started with Raspberry PI Computer. If you are well aware of Raspberry PI and already using it through desktop mode or remote mode (SSH or VNC or both), we don't want you to waste time by scrolling down all the upcoming images. You can directly go to the steps for running the program for object detection with vocal assistance.
+
+[Steps for running our project.](https://github.com/SyedSahil80328/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation#installing-neccessary-modules)
+
+Note: If you haven't enabled the camera option (without enabling it makes our program to fail) though you have [upgraded the PI](https://github.com/SyedSahil80328/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation#upgrading-the-pi) (Click if you haven't upgraded it yet) please [don't skip it](https://github.com/SyedSahil80328/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation#enabling-camera-option).
+
+# What is Raspberry PI?
+
+Raspberry Pi is a series of small, affordable, single-board computers developed by the Raspberry Pi Foundation, a UK-based charity organization. The primary goal of the Raspberry Pi project is to promote computer science education and enable people of all ages to learn about programming and computing in a hands-on and cost-effective way.
+
+Key features and aspects of Raspberry Pi include:
+
+1. **Affordability:** Raspberry Pi boards are priced reasonably, making them accessible to a wide audience, including students, hobbyists, and professionals.
+2. **Versatility:** Despite their small size, Raspberry Pi computers are versatile and can be used for various purposes, including desktop computing, programming, DIY projects, home automation, robotics, and more.
+3. **Hardware:** Raspberry Pi boards typically include various ports for peripherals, GPIO (General Purpose Input/Output) pins for hardware interfacing, HDMI for video output, USB ports, and networking capabilities.
+4. **Community and Support:** The Raspberry Pi community is large and active, with a wealth of online resources, forums, and tutorials. This strong community support contributes to the ease of learning and troubleshooting.
+5. **Educational Value:** Raspberry Pi is widely used in schools and educational institutions to teach programming and computer science. Its low cost allows for widespread adoption in educational settings.
+6. **DIY Projects:** Raspberry Pi is popular for DIY (Do It Yourself) projects, allowing enthusiasts to create custom solutions for various applications, such as media centers, home servers, retro gaming consoles, and more.
+7. **Open Source:** The Raspberry Pi operating system, Raspbian (now called Raspberry Pi OS), is based on Linux and is open source. This encourages a culture of sharing and collaboration.
+8. **Low Power Consumption:** Raspberry Pi boards are energy-efficient and have low power requirements, making them suitable for projects where power consumption is a concern.
+9. **Continuous Development:** The Raspberry Pi Foundation regularly releases new models with improved hardware specifications, ensuring that the platform stays relevant and up-to-date.
+
+The importance of Raspberry Pi lies in its role in democratizing access to computing and providing a platform for learning, experimentation, and innovation. It has become a valuable tool for introducing individuals, especially students, to the world of programming and electronics, fostering creativity and problem-solving skills. Additionally, its affordability and versatility make it an excellent choice for a wide range of practical applications in various fields.
+
+# Basic Installation
+
+Refer [here](https://www.raspberrypi.com/documentation/computers/getting-started.html) for learning the complete setup of your Raspberry PI.
+
+[Download Raspberry PI Imager.](https://www.raspberrypi.com/software/)  
+[Go through the installation of OS via NOOBS (*New Out Of Box Software*).](https://www.raspberrypi.com/news/introducing-noobs/)  
+[Install NOOBS from the official GitHub repository of Raspberry PI.](https://github.com/raspberrypi/noobs)
+
+However, the NOOBS is now obsolete and is not updated regularly. For getting a regularly updated Operating System, we recommend installing it with Raspberry PI Imager.
+
+After installing, your Raspberry PI interface will look as shown in Figure 1.
+
+![Raspberry PI Interactive OS](https://www.raspberrypi.com/documentation/computers/images/recommended-software.png)
 <p align="center"><i>Figure 1: Raspberry PI Interactive OS</i></p>
 
-<h1>Setup Environment</h1>
-<p>We can have laboratory environment both wired(just like desktop computer) or wireless(through SSH or VNC).</p>
-<p>For Wired setup, we require</p>
-<ol>
-<li>Monitor which supports HDMI port.<sup><i>1</i></sup></li>
-<li>Mouse.</li>
-<li>Keyboard.</li>
-<li>HDMI to micro HDMI cable or adapter.</li>
-</ol>
-<p><i><sup>1</sup>If you have only VGA port in your monitor and doesn't support audio, a VGA to HDMI adapter with an audio device is needed.</i></p>
-<p>For wireless usage, you should enable SSH as in Figure 2 when imager has been installed for downloading the Operating System for Raspberry PI. Then issue the command.</p>
+# Setup Environment
+
+We can have a laboratory environment both wired (just like a desktop computer) or wireless (through SSH or VNC).
+
+For Wired setup, we require:
+
+1. Monitor which supports HDMI port.<sup><i>1</i></sup>
+2. Mouse.
+3. Keyboard.
+4. HDMI to micro HDMI cable or adapter.
+
+<sup><i>1</i></sup>*If you have only VGA port in your monitor and it doesn't support audio, a VGA to HDMI adapter with an audio device is needed.*
+
+For wireless usage, you should enable SSH as in Figure 2 when the imager has been installed for downloading the Operating System for Raspberry PI. Then issue the command.
 
 ```
 ssh mass@192.168.xxx.xxx #Replace "mass" with your actual username and "192.168.xxx.xxx" with the actual detected IP address of your device.
@@ -78,49 +87,58 @@ ssh mass@192.168.xxx.xxx #Replace "mass" with your actual username and "192.168.
 </p>
 <p align="center"><i>Figure 2: Enabling SSH by clicking Ctrl+Shift+X on Image 1 to open Image 2</i></p>
 
-<p>Then provide your password to get connected (Give yes for the message after encountering a message if you are logging in for first time).</p>
-<p>You'll be logged in as shown in figure 3.</p>
-<img src="https://github.com/SyedSahil80328/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation/blob/main/Manual%20Pictures/login-SSH.png">
+Then provide your password to get connected (give "yes" for the message after encountering a message if you are logging in for the first time).
+
+You'll be logged in as shown in Figure 3.
+
+![Login through SSH](https://github.com/SyedSahil80328/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation/blob/main/Manual%20Pictures/login-SSH.png)
+
 <p align="center"><i>Figure 3: Login through SSH</i></p>
 
-<p><i>
-<b>Note:</b> Both PI and operating device must be in same Wi-Fi network.<br>
-<b>Tips:</b> After connecting the operating device to a Wi-Fi, you can find IP address through the application <a href="https://www.fing.com/products/fing-desktop">fing</a>.
-</i></p>
+**Note:** Both PI and operating device must be on the same Wi-Fi network.  
+**Tips:** After connecting the operating device to Wi-Fi, you can find the IP address through the application [Fing](https://www.fing.com/products/fing-desktop).
 
-<b><p>To have seamless experience, we recommend using wired method as it is easy and doesn't require internet (except for installation and upgrading required modules).</p></b>
+**To have a seamless experience, we recommend using the wired method as it is easy and doesn't require internet (except for installation and upgrading required modules).**
 
-<h1>Usage through VNC</h1>
-<p>Working through SSH terminal the entire time could be tedious. Also, our program requires GUI for showing the output. In that case, SSH fails to execute our program. So, to interactively work with Raspberry PI headlessly, we can use VNC which is a best alternative to SSH. VNC lets you to work with PI on GUI. To enable it, turn on your Raspberry PI and connect via your device through SSH. Then issue the command.</p>
+# Usage through VNC
+
+Working through the SSH terminal the entire time could be tedious. Also, our program requires a GUI for showing the output. In that case, SSH fails to execute our program. So, to interactively work with Raspberry PI headlessly, we can use VNC which is a better alternative to SSH. VNC lets you work with PI on a GUI. To enable it, turn on your Raspberry PI and connect via your device through SSH. Then issue the command.
 
 ```
 sudo raspi-config
 ```
 
-<p>Then select interface option by hitting enter button on <code>Interface Options</code> (Control through up/down arrow buttons) as shown in Figure 4.</p>
-<img src="https://github.com/SyedSahil80328/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation/blob/main/Manual%20Pictures/raspi-config.png">
+Then select interface option by hitting enter button on <code>Interface Options</code> (Control through up/down arrow buttons) as shown in Figure 4.
+
+![Figure 4: Raspi Config Interface](https://github.com/SyedSahil80328/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation/blob/main/Manual%20Pictures/raspi-config.png)
 <p align="center"><i>Figure 4: Raspi Config Interface</i></p>
 
-<p>Then select VNC (Figure 5).</p>
+Then select VNC (Figure 5).
+
 <img src="https://github.com/SyedSahil80328/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation/blob/main/Manual%20Pictures/config-interface.png">
 <p align="center"><i>Figure 5: Selection of VNC</i></p>
 
-<p>Then select <code>Yes</code> (control by left/right arrow and hit enter) shown in Figure 6.</p>
+Then select <code>Yes</code> (control by left/right arrow and hit enter) shown in Figure 6.
+
 <img src="https://github.com/SyedSahil80328/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation/blob/main/Manual%20Pictures/interface-VNC.png">
 <p align="center"><i>Figure 6: Enabling VNC</i></p>
 
-<p>After clicking yes, you'll see a couple of output as shown in Figure 7a and 7b.</p>
+After clicking yes, you'll see a couple of output as shown in Figure 7a and 7b.
+
 <img src="https://github.com/SyedSahil80328/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation/blob/main/Manual%20Pictures/VNC-success-console.png">
 <p align="center"><i>Figure 7a: Output of activation on console</i></p>
 <img src="https://github.com/SyedSahil80328/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation/blob/main/Manual%20Pictures/VNC-success.png">
 <p align="center"><i>Figure 7b: Output of activation on raspi-config</i></p>
 
-<p>Select <code>OK</code> and hit finish.</p>
+Select <code>OK</code> and hit finish.
+
 <img src="https://github.com/SyedSahil80328/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation/blob/main/Manual%20Pictures/raspi-config-finish.png">
 <p align="center"><i>Figure 8: Exiting the raspi-config</i></p>
 
-<p>Cool! We have now enabled VNC for working with Raspberry PI headlessly along with GUI. Next, head over to RealVNC viewer.<br><a href="https://www.realvnc.com/en/connect/download/viewer/">Download RealVNC viewer.</a></p>
-<p>After opening the viewer, create a new connection as shown in figure 9.</p>
+Cool! We have now enabled VNC for working with Raspberry PI headlessly along with GUI. Next, head over to RealVNC viewer.<br><a href="https://www.realvnc.com/en/connect/download/viewer/">Download RealVNC viewer.</a>
+
+After opening the viewer, create a new connection as shown in figure 9.
+
 <p align="center"><img src="https://github.com/SyedSahil80328/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation/blob/main/Manual%20Pictures/VNC-new.png" width="75%"></p>
 <p align="center"><i>Figure 9: Creation of new connection</i></p>
 
